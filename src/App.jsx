@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import PdfUpload from "./components/PdfUpload";
 import AIJobMatcher from "./components/AIJobMatcher";
 import { FaFileUpload } from "react-icons/fa";
+import Logo from "./assets/my-logo.png";
 
 function App() {
   const [resumeText, setResumeText] = useState("");
@@ -28,7 +29,7 @@ function App() {
         <div className="navbar-left">
           <img
             className="navbar-logo"
-            src="./src/assets/my-logo.png"
+            src={Logo}
             alt="Logo"
           />
           <span className="navbar-title">AI Resume Analyzer</span>
