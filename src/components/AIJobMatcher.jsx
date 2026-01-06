@@ -1,4 +1,4 @@
-import jobs from "./data/jobs";
+import jobs from "./data/jobs.js"
 import skills from "./data/skills";
 import courses from "./data/courses";
 
