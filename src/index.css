@@ -1,0 +1,219 @@
+/* =========================
+   RESET & BASE STYLES
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   HEADER / NAVBAR (FULL WIDTH)
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  width: 100%;
+  background: #4a90e2;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-logo {
+  height: 50px;
+}
+
+.navbar-title {
+  font-size: 2rem;
+  font-weight: bold;
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.navbar-right {
+  font-weight: 500;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+.main-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* File upload with icon */
+.file-upload-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  background: #e1eaff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px dashed #4a90e2;
+  transition: background 0.3s ease;
+}
+
+.file-upload-wrapper:hover {
+  background: #d0e0ff;
+}
+
+.file-upload-wrapper input[type="file"] {
+  display: none; /* hide default input */
+}
+
+.file-upload-wrapper span {
+  font-weight: 600;
+  color: #4a90e2;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ab8;
+  transform: scale(1.05);
+}
+
+button.reset-btn {
+  background-color: #e74c3c;
+}
+
+button.reset-btn:hover {
+  background-color: #c0392b;
+}
+
+/* =========================
+   JOB CARDS
+========================= */
+.job-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.match-percentage {
+  font-weight: 700;
+  color: #ff6b6b;
+}
+
+.missing-skills {
+  color: #e74c3c;
+  margin-top: 5px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 15px 20px;
+  background: #4a90e2;
+  color: white;
+  width: 100%;
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+  
+  .navbar-left {
+    margin-bottom: 10px;
+  }
+
+  .navbar-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttons-wrapper {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .file-upload-wrapper {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-title {
+    font-size: 1.3rem;
+  }
+
+  .navbar-right {
+    font-size: 0.9rem;
+  }
+}
