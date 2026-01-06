@@ -3,7 +3,7 @@ import skills from "./data/skills";
 import courses from "./data/courses";
 
 function AIJobMatcher({ resumeText }) {
-  // ✅ Safety check: ensure resumeText is a string
+  // Safety check: ensure resumeText is a string
   if (!resumeText || typeof resumeText !== "string") return null;
 
   const text = resumeText.toLowerCase();
