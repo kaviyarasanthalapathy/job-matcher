@@ -49,7 +49,9 @@ function App() {
           setResumeText={setResumeText} 
           incrementCount={() => setUploadCount(prev => prev + 1)}
         />
-
+        {!resumeText && (
+        <h3 className="note">Note: Please Upload a Resume in Image Type Only (JPG,PNG)</h3>
+        )}
         <div className="buttons-wrapper">
           <button onClick={() => setShowJobs(true)}>
             Check Matching Jobs

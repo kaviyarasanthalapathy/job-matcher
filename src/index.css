@@ -42,7 +42,7 @@ body {
 .navbar-title {
   font-size: 2rem;
   font-weight: bold;
-  animation: blink 1.2s infinite;
+  
 }
 
 @keyframes blink {
@@ -79,6 +79,7 @@ body {
   border-radius: 6px;
   border: 1px dashed #4a90e2;
   transition: background 0.3s ease;
+  font-size: 3.0rem;
 }
 
 .file-upload-wrapper:hover {
@@ -95,6 +96,12 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+.note{
+  color:firebrick;
+  font-size:medium;
+  font-weight:600;
+  animation: blink 1.2s infinite;
 }
 
 /* =========================
@@ -143,6 +150,7 @@ button.reset-btn:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   width: 100%;
+  
 }
 
 .job-card:hover {
@@ -158,6 +166,12 @@ button.reset-btn:hover {
 .missing-skills {
   color: #e74c3c;
   margin-top: 5px;
+  list-style: none;
+   padding-left: 0; 
+
+}
+.missing-skills li {
+  margin-bottom: 4px;
 }
 
 /* =========================
@@ -205,6 +219,7 @@ footer {
     flex-direction: column;
     width: 100%;
     justify-content: center;
+  
   }
 }
 
